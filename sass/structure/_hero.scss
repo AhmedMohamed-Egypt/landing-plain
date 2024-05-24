@@ -1,0 +1,48 @@
+.hero{
+    height: 100vh;
+    background-color: $grey;
+}
+.herocontent{
+    width: 87%;
+    margin-left: auto;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 200px;
+    &__h1{
+        width: 710px;
+        line-height: 1;
+        max-width: 100%;
+    }
+    &__leftside{
+        width: 40%;
+        z-index: 999999999;
+        &--text{
+            line-height: 1.7;
+            width: 620px;
+            max-width: 100%;
+        }
+        &--managers{
+            &--imgs{
+                img{
+                    border: 5px solid $grey;
+                    &:not(:first-child){
+                    
+                    }
+                }
+            }
+            &--txt{
+                width: 300px;
+            }
+        }
+
+    }
+    &__rightside{
+        width: 60%;
+        z-index: 1;
+       transform: translate(0px, -50px);
+       &--txt{
+        transform: translate(0px,-75px)
+       }
+    }
+
+}

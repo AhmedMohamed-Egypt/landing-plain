@@ -1,0 +1,108 @@
+@include max(1155px){
+    .testmonialCard__txt{
+        font-size: 14.5px;
+    }
+    .whatOffer__subHeading{
+        max-width: 80%;
+    }
+}
+@include max(1001px){
+    .testmonialCard__txt{
+       // height: 250px;
+    }
+}
+
+@include max(994px){
+    .testmonialCard{
+     width: 90%;
+    }
+    .testmonial .swiper-wrapper .swiper-slide-active+.swiper-slide-next .testmonialCard{
+        box-shadow: rgba(0,0,0,.1) 0px 10px 20px;
+    }
+    .whatOffer__content{
+        width: 100%;
+    }
+    .whatOffer__dashboard{
+        width: 100%;
+        margin-top: 50px;
+        &::after{
+            border-radius: 0;
+        }
+        .dashboardCard{         
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .whatOffer{
+        padding-bottom: 0;
+    }
+    .whatOffer__inventory{
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .bottomFooter__container{
+        ul{
+            flex-wrap: wrap;
+            li{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@include max(770px){
+    .training__leftside{
+        display: none;
+    }
+    .testmonial .testmonialCard{
+        //width: 55%;
+    }
+    .testmonial .pagination{
+        max-width: 95%;
+    }
+    .GetQoute__floatImg{
+        display: none;
+    }
+    .saveTime{
+        margin-top: 20px;
+        background-color: $grey;
+    }
+    .saveTime__container{
+        background: none;
+        border-radius: 0;
+    }
+    .saveTime__estimate--inputgroup--line {
+        height: 40px;
+    }
+    .saveTime__estimate--inputgroup--sign{
+        font-size: 40px;
+    }
+    .saveTime__estimate--inputgroup--input{
+        font-size: 25px;
+        width: 120px;
+        &::placeholder{
+            font-size: 25px;
+        }
+    }
+}
+@include max(766px){
+    .dashboardCard span[class^=icon-]{
+        font-size: 40px;
+    }
+    .testmonialCard{
+        width: 70%;
+    }
+    .testmonialCard__txt{
+        height: auto;
+    }
+}
+@include max(650px){
+    .saveTime__estimate--formTwo--inputGroup{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
