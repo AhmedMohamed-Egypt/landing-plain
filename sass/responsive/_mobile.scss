@@ -1,0 +1,45 @@
+@include max(620px){
+    .GetQoute__floatImg{
+        width: 300px;
+    }
+}
+@include max(600px){
+    .whatOffer__dashboard{
+        .dashboardCard {
+            flex-direction: column;
+            max-width: 90%;
+            border-radius: 8px;
+            *{
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+                text-align: center;
+            }
+            h2{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .herocontent__h1{
+        font-size: 50px !important;
+    }
+    .herocontent__leftside--text{
+        width: 95%;
+    }
+    .herocontent__rightside--txt{
+    transform: none;
+    padding-bottom: 20px;
+    }
+}
+@include max(450px){
+    .GetQoute__floatImg{
+        width: 250px;
+        margin: 0;
+        bottom: 0;
+        top: 25%;
+        margin: auto;
+    }
+    .bottomFooter__container ul li{
+        font-size: 14px;
+    }
+}
