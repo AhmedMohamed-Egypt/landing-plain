@@ -1,5 +1,6 @@
 .whatOffer {
     padding-bottom: 120px;
+overflow-x: hidden;
     &__subHeading{
         max-width: 850px;
         line-height: 1.6;
@@ -39,6 +40,9 @@
       
     }
     &__inventory {
+        transform: translate(-100px, 100px);
+        
+        /*
         background-color: $lightGreen;
      
         border-radius: 24px;
@@ -47,6 +51,7 @@
         margin: auto;
         max-width: 100%;
         transform: translate(0px,30px);
+        */
     }
     &__content{
        

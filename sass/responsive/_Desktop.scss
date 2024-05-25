@@ -1,5 +1,32 @@
 
+@keyframes rotate-logo {
+    from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(-360deg);
+      }
 
+
+}
+
+@include max(1440px){
+    .whatOffer__inventory{
+        transform:scale(.8) translate(0px, 100px);
+    }
+    .whatOffer__dashboard{
+        transform: translateX(250px);transform: translateX(250px);
+    }
+    
+}
+@include max(1320px){
+    .whatOffer__inventory{
+        transform: scale(0.8) translate(-50px, 100px);
+    }
+    .whatOffer__dashboard{
+        transform: translateX(300px);
+    }
+}
 
 @include max(1300px){
     .navbarDew{
@@ -12,14 +39,24 @@
 //max-width: 95%;
     }
 }
+@include max(1250px){
+    .whatOffer__inventory{
+        transform: scale(0.65) translate(-50px, 100px);
+    }
+}
 @include max(1200px){
+    .whatOffer__dashboard{
+        transform: none;
+    }
     .whatOffer__content{
         flex-direction: column;
     }
     .whatOffer__inventory{
+        
         transform: none;
         margin-top: 25px;
         width: 100%;
+        
     }
     .GetQoute__floatImg{
         width: 350px;
@@ -58,23 +95,34 @@
 
 @include max(1150px){
     .whatOffer__dashboard{
-        transform: none;
-        padding: 25px 0;
+transform: none;
+       padding: 25px 0;
         &::after{
             top: 0;
         }
     }
     .whatOffer__dashboard>div.dashboardCard{
-        transform: none !important;
-        margin-left: auto;
-        margin-right: auto;
+       transform: none !important;
+      margin-left: auto;
+     margin-right: auto;
+    }
+    .whatOffer__inventory img{
+    // transform: skew(10deg,5deg) rotateX(40deg) rotateY(40deg);
+   display: block;
+  margin: auto;
+  width: 75%;
+     animation: rotate-logo 15s linear infinite;
+    
+    
     }
 }
 
 @include min(1200px){
     .whatOffer__inventory {
+        /*
         width: 350px;
         height: 350px;
+        */
     }
     .GetQoute__floatImg{
         top: 35%;
@@ -92,7 +140,7 @@
         width: 550px;
     }
     .whatOffer__inventory{
-     width: 400px;
+   //  width: 400px;
     }
     .herocontent {
         margin-top: 100px;
@@ -106,8 +154,10 @@
         width: 50%;
     }
    .whatOffer__inventory {
+    /*
         width: 470px;
         height:350px;
+        */
     }
 }
 @include min(1700px){
@@ -116,3 +166,5 @@ width: 800px;
        
     }
 }
+
+

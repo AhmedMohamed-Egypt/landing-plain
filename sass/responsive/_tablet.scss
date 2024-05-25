@@ -54,6 +54,12 @@
 }
 
 @include max(770px){
+    .GetQoute__lists{
+        flex-direction: column;
+        ul{
+            margin-left: 0;
+        }
+    }
     .training__leftside{
         display: none;
     }
@@ -63,9 +69,12 @@
     .testmonial .pagination{
         max-width: 95%;
     }
-    .GetQoute__floatImg{
-        display: none;
+   .GetQoute__floatImg {
+       // display: none;
+       width:450px;
+       top: 150px;
     }
+    
     .saveTime{
         margin-top: 20px;
         background-color: $grey;
