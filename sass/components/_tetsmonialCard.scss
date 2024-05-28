@@ -1,0 +1,12 @@
+.testmonialCard{
+    border: 1px solid $grey-5;
+    border-radius: 14px;
+    
+    padding: 20px 20px;
+    width: 90%;
+    margin: auto;
+    &__txt{
+        line-height: 1.55;
+        height: 300px;
+    }
+}

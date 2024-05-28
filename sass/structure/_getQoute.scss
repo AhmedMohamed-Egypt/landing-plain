@@ -1,0 +1,27 @@
+.GetQoute{
+    background-color: $grey;
+    padding: 100px 0;
+    position: relative;
+    &__container {
+        width: 1250px;
+        margin: auto;
+    }
+    &__mainHeading{
+        font-size: 80px;
+        line-height: 1;
+    }
+    &__floatImg{
+         position: absolute;
+         right: 0;
+         top: 0;
+    }
+
+}
+.bottomFooter{
+    background-color: $darkerBlue;
+    padding: 25px 0;
+    &__container{
+        width: 90%;
+        margin: auto;
+    }
+}
