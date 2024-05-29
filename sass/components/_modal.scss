@@ -4,6 +4,9 @@ body.modalOpen {
   .modalSignUp {
     opacity: 1;
     z-index: 999999999999999;
+    &__content{
+        opacity: 1;
+    }
   }
 }
 
@@ -15,7 +18,7 @@ body.modalOpen {
   height: 100%;
   opacity: 0;
   z-index: -1;
-  transition: 0.5s;
+
 
 
   &::after {
@@ -24,6 +27,7 @@ body.modalOpen {
     backdrop-filter: blur(8.199999809265137px);
   }
   &__content {
+    transition: 0.2s;
     padding: 25px 15px;
     background-color: $white;
     border-radius: 14px;
@@ -33,7 +37,11 @@ body.modalOpen {
     padding: 50px 0px;
     width: 500px;
     max-width: 100%;
+    opacity: 0;
    // padding-top: 50px;
+   @include max(1440px){
+    padding: 15px 15px;
+   }
    @include max(500px){
     max-width: 90%;
     overflow-y: scroll;
@@ -57,6 +65,11 @@ body.modalOpen {
       padding: 13px 0px;
       padding-left: 20px;
       transition: .35s;
+   @include max(1440px){
+          padding: 10px 0px;
+          padding-left: 20px;
+
+    }
       @include max(400px){
    
         padding: 9px 0px;
@@ -94,6 +107,10 @@ body.modalOpen {
             border-radius: 30px;
             border: 1px solid rgba(25, 27, 29, 0.15);
             width: 100%;
+              @include max(1440px){
+      padding: 12px 0;
+            padding-left: 25px;
+    }
             @include max(500px){
                 padding: 10px 0;
                 padding-left: 25px;
@@ -113,11 +130,21 @@ body.modalOpen {
     }
     &--btnsubmit{
         button{
+            @include max(1440px){
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
             @include max(500px){
                 padding-top: 10px !important;
                 padding-bottom: 10px !important;
             }
         }
+    }
+    &--heading{
+      @include max(1440px){
+        margin-bottom: 25px;
+        font-size: 30px;
+      }
     }
   }
   &__closeBtn{
@@ -125,5 +152,8 @@ body.modalOpen {
     left: 20px;
     top: 20px;
     cursor: pointer;
+    @include max(1440px){
+      top: 30px;
+    }
   }
 }
