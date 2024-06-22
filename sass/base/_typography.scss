@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot');
@@ -105,13 +105,21 @@
 .font-manrope{
   font-family: "Manrope", sans-serif !important;
 }
+.font-popinos{
+  font-family: "Poppins", sans-serif;
+}
 .coloredword{
   color: $pink;
   font-weight: 600;
 }
-
+.capiliatize{
+  text-transform: capitalize;
+}
 .txtLHeight{
   line-height: 1.6;
+}
+.shrinkLh-1{
+  line-height: 1;
 }
 /*h2 heading Title */
 .h2Heading{
@@ -120,6 +128,7 @@
   font-family: "Outfit", sans-serif;
   font-size: 65px;
   font-weight: 400;
+  text-transform: capitalize;
   @include max(992px){
     font-size: 45px !important;
   }

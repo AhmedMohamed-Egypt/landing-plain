@@ -1,0 +1,43 @@
+.aboutPage{
+    &__sectionOne{
+        @include max(992px){
+            flex-direction: column;
+            padding-bottom: 50px;
+            margin-top: 50px;
+
+        }
+        &--leftside{
+            &--txt{
+             max-width: 85%;
+             @include max(992px){
+                max-width: 100%;
+
+             }
+             @include max(768px){
+//height: 500px;
+            //   overflow-y: scroll;
+               padding-bottom: 50px;
+                
+             }
+            }
+        }
+        &--rightside{
+            @include max(1350px){
+                min-width: 300px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__bottomfooter{
+        
+        @include min(770px){
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+   
+  
+}

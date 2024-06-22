@@ -14,7 +14,8 @@
     height: 40px;
     content: "";
 }
-.testmonial{
+
+.testmonial,.pricingPage__swiper{
     position: relative;
     .swiper {
         padding-bottom: 50px;
@@ -74,4 +75,41 @@
 }
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
     opacity: .65;
+}
+%common{
+    border-radius: 50%;
+    background-color: #1d141463;
+    width: 35px;
+    height: 35px;
+    background-size: 80% !important;
+    background-position: center !important;
+    @include max(500px){
+        width: 25px;
+        height: 25px;
+    }
+}
+.pricingPage__swiper .pagination {
+width: 100%;
+margin: 0;
+bottom: auto;
+
+.swiper-button-next{
+    right: -35px;
+    @include max(500px){
+        right: -10px;
+    
+    }
+    &::after{
+        @extend %common;
+    }
+}
+.swiper-button-prev{
+  left: -35px;
+  @include max(500px){
+    left: -10px;
+}
+  &::after{
+    @extend %common;
+}
+}
 }

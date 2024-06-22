@@ -5,7 +5,7 @@
 }
 @for $i from 1 through 60 {
   .mrb-#{$i} {
-    margin-bottom: $i + px;
+    margin-bottom: $i + px !important;
   }
 }
 @for $i from 1 through 60 {

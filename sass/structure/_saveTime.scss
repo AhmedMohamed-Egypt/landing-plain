@@ -1,5 +1,5 @@
 .saveTime{
-    margin-top: 150px;
+padding-top: 150px;
     &__container{
         background-color: $grey;
         border-radius: 22px;
@@ -19,12 +19,27 @@
             padding-bottom: 50px;
             position: relative;
             z-index: 99;
+            @include max(450px){
+                padding-bottom: 15px;
+            }
+            &__error{
+              transform: translateY(50px);
+              color: rgb(167, 15, 15);
+              font-weight: bold;
+              line-height: 1.4;
+              min-height: 30px;
+              margin-bottom: 10px;
+            }
         }
         &--formTwo{
         margin-top: 100px !important;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            @include max(450px){
+                padding-top: 60px !important;
+                margin-top: 0 !important;
+            }
         }
         &--bkgroundBlue{
             position: absolute;
@@ -42,32 +57,58 @@
       
         &--inputgroup{
             align-items: flex-end;
+            //transform: translateX(50px);
             &--line{
         width: 4px;
         height: 60px;
         background-color: $scndryGrey;
+        
             }
             &--sign{
                 transform: translateY(10px);
                 margin-right: 5px;
             }
             &--input{
+                background: none;
                 font-family: "Outfit", sans-serif;
                 font-size: 35px;
                 color: $black;
-               width: 200px;
+                color: #000;
+               min-width: 200px;
                 outline: 0 !important;
                 border:none !important;
                 display: block;
                 padding-top: 20px;
-                background: none;
+              
                 transform: translateY(5px);
                 padding-left: 10px;
                 &::placeholder{
                     font-family: "Outfit", sans-serif;
                     font-size: 55px;
-                    color: $scndryGrey;
+                  //  color: $scndryGrey;
+                    color: $black;
                     
+                }
+                &.savingResult{
+                    min-width: 100px;
+                    max-width: 250px;
+                    text-align: center;
+                    font-size: 45px;
+                    -webkit-text-fill-color: $black;
+                        opacity: 1;
+                    &::placeholder{
+                       
+                    }
+                    /*
+                    &.active{
+                        &::-webkit-input-placeholder{
+                            color: $black !important;
+                        }
+                        &:-moz-placeholder{
+                            color: $black !important;
+                        }
+                    }
+                    */
                 }
             }
         }
@@ -79,6 +120,7 @@
             display: inline-block;
             width: 194px;
             bottom: -30px;
+            display: none !important;
         }
     }
    

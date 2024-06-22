@@ -1,3 +1,9 @@
+body.home{
+    .navList li:nth-child(1)>a{
+        color: $green;
+    }
+}
+
 .navbarDew{
     width: 75%;
     margin: auto;
@@ -45,13 +51,17 @@
         overflow: hidden;
     }
    li{
+ 
     >a{
-        &.active{
-            color: $blue;
+        &.activelink {
+            color: $green;
+        }
+        &.active {
+          //  color: $blue;
         }
         transition: .5s;
         &:hover{
-            color: $blue;
+            color: $green;
         }
     }
     &:not(:last-child){

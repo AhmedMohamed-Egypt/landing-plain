@@ -1,0 +1,77 @@
+
+
+.pricingPage{
+    &__container{
+        .h2Heading {
+            @include max(450px){
+                font-size: 32px !important;
+                width: 90%;
+                margin: auto;
+            }
+        }
+        &--toggleBtns{
+            border: 1px solid $lightPink;
+            border-radius: 80px;
+            width: 262px;
+            margin: auto;
+            padding: 3px 5px;
+            position: relative;
+            &::after{
+                @include after();
+                background-image: $bkground;
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                right: -66px;
+                left: auto;
+                top: -4px;
+                z-index: -1;
+                @include max(400px){
+                    width: 75px;
+                    height: 75px;
+                    right: -40px;
+                }
+            }
+            button{
+                width: 50%;
+                cursor: pointer;
+                position: relative;
+                &::after{
+                    @include after();
+                    border-radius: 20px;
+                    z-index: -1;
+                    width: 0;
+                    transition: .5s;
+                }
+                &.active{
+                    
+                    color: $white;
+                    border-radius: 20px;
+                    padding: 5px 0;
+                    &::after{
+                        background-color: $green;
+                        width: 100%;
+
+
+                    }
+                }
+            }
+        }
+        &--subscription{
+            /*
+         opacity: 0;
+         transition: .5s;
+         &.animate__animated{
+            opacity: 1;
+         }
+         */
+        }
+    }
+    &__swiper{
+        width: 1600px;
+        max-width: 90%;
+        margin: auto;
+        padding-bottom: 50px;
+    
+    }
+}

@@ -91,9 +91,9 @@
     }
     .saveTime__estimate--inputgroup--input{
         font-size: 25px;
-        width: 120px;
+//width: 120px;
         &::placeholder{
-            font-size: 25px;
+            font-size: 35px;
         }
     }
 }
@@ -110,8 +110,16 @@
 }
 @include max(650px){
     .saveTime__estimate--formTwo--inputGroup{
-        width: 90%;
+        width: 48%;
+        /*
         margin-left: auto;
         margin-right: auto;
+        */
+        input{
+            width: 100%;
+        }
+        label{
+            font-size: 10px;
+        }
     }
 }

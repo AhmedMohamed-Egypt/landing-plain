@@ -23,5 +23,12 @@
     &__container{
         width: 90%;
         margin: auto;
+
+        a{
+            transition: .25s;
+            &:hover{
+                color: $green;
+            }
+        }
     }
 }

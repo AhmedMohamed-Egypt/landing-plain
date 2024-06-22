@@ -63,8 +63,13 @@ body.modalOpen {
     &--link {
       border: 1px solid rgba(25, 27, 29, 0.15);
       padding: 13px 0px;
-      padding-left: 20px;
+    //  padding-left: 20px;
       transition: .35s;
+      justify-content: center;
+      span{
+        display: block;
+        width: 175px;
+      }
    @include max(1440px){
           padding: 10px 0px;
           padding-left: 20px;

@@ -1,77 +1,102 @@
-.learnmoreBtn{
-    color: $blue;
-    font-weight: bold;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
+.learnmoreBtn {
+  color: $blue;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 .closeBtn {
-    @include setElmnt(20,20,transparent,4);
-    background-color: $scondryBlue;
-    position: relative;
-    svg{
-        @include cntrElmnt();
+  @include setElmnt(20, 20, transparent, 4);
+  background-color: $scondryBlue;
+  position: relative;
+  svg {
+    @include cntrElmnt();
+  }
+}
+.login {
+}
+.signUp {
+}
+.customBtn {
+  background-color: $green;
+  padding: 11px 17px;
+  color: $scondryWhite;
+  border-radius: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid transparent;
+  &.requestdemo {
+    font-weight: 700;
+    padding: 16px 50px;
+    &:hover {
+      color: $green;
+      border: 1px solid $green;
+      background-color: $white !important;
     }
-}
-.login{
-  
-}
-.signUp{
-  
-  
-}
-.customBtn{
-    background-color: $green;
-    padding: 11px 17px;
-    color: $scondryWhite;
+  }
+  &.choosePlan {
+    background-color: $white !important;
+    color: $green;
+    border: 2px solid $green;
+    padding: 15px 30px;
+    &:hover {
+      background-color: $green;
+      color: $white !important;
+    }
+  }
+
+  &.signBtn {
+    &:hover {
+      // color: $white !important;
+      border: 1px solid $green;
+      background-color: $white !important;
+    }
+  }
+  &.hoversignIn {
+    &:hover {
+      color: $green;
+      background-color: $white !important;
+      border: 1px solid $green;
+    }
+  }
+  &.getQoute {
+    border: 2px solid $green;
+    background-color: transparent;
+    color: $green !important;
+  }
+  &.getstarted {
+    padding: 16px 46px;
+  }
+  &.startSaving {
     border-radius: 30px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s;
-    border: 1px solid transparent;
-    &.hoversignIn{
-        &:hover{
-            color: $green ;
-            background-color: $white !important;
-             border: 1px solid $green;
-        }
-       
-    }
-    &.getQoute{
-        border: 2px solid $green;
-        background-color: transparent;
-        color: $green !important;
+    border: 1px solid $lightGreen;
 
+    background: $lightergreen;
+    //color: $green;
+    font-family: "Outfit", sans-serif;
+    padding: 17px 37px;
+    &:hover {
+      transform: scale(1.01);
+      background-color: $green;
+      color: $white;
+      border: 1px solid transparent;
     }
-    &.getstarted{
-        padding: 16px 46px;
+  }
+  &.hoverContact:not([disabled]) {
+    &:hover {
+      background-color: $white !important;
+      color: $green;
     }
-    &.startSaving{
-        border-radius: 30px;
-border: 1px solid $lightGreen;
-
-background: $lightergreen;
-//color: $green;
-font-family: "Outfit", sans-serif;
-padding: 17px 37px;
-&:hover{
-    transform: scale(1.01);
-    background-color: $green;
-    color: $white;
-    border: 1px solid transparent;
+  }
+  &.hoverContact[disabled] {
+    cursor: default;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
 }
-    }
-    &.hoverContact{
-        &:hover{
-            background-color: $white !important;
-            color: $green;
-            
-        }
-       
-    }
-  
-}
-
-

@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandingPage</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>LandingPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body> 
     <div class="hero pdt-50">
       <div class="container__navbarDew"> 
-        <div class="navbarDew d-flex align-items-center justify-content-between "> <a class="d-block " href="#"><img src="images/logo.png"></a>
+        <div class="navbarDew d-flex align-items-center justify-content-between "> <a class="d-block " href="/"><img src="images/logo.png"></a>
           <ul class="navList d-flex align-items-center w-100"> 
-            <li class="margin-left-auto "><a class="active     font-dmsans weight-500 size-16 drkBlue" href="#">Home</a></li>
-            <li class=" "><a class="     font-dmsans weight-500 size-16 drkBlue" href="#">About</a></li>
+            <li class="margin-left-auto "><a class="     font-dmsans weight-500 size-16 drkBlue" href="/">Home</a></li>
+            <li class=" "><a class="     font-dmsans weight-500 size-16 drkBlue" href="About.html">About</a></li>
             <li class=" "><a class="     font-dmsans weight-500 size-16 drkBlue" href="#feature">Features</a></li>
-            <li class=" margin-right-auto"><a class="     font-dmsans weight-500 size-16 drkBlue" href="#pricing">Pricing</a></li>
+            <li class=" margin-right-auto"><a class="     font-dmsans weight-500 size-16 drkBlue" href="Pricing.html">Pricing</a></li>
             <li class=" "><a class=" signBtn login green weight-bold size-16 mrt-20   font-dmsans weight-500 size-16 drkBlue" href="#">Sign in</a></li>
             <li class=" "><a class=" signBtn  weight-bold size-16 radius-28  customBtn  font-dmsans weight-500 size-16 drkBlue" href="#">Sign Up</a></li>
           </ul>
@@ -75,7 +77,7 @@
           <div class="training__rightside"> 
             <p class="label mrb-25">Unlocking Excellence</p>
             <h2 class="h2Heading training__heading mrb-25"><span class="weight-bold pink">Training</span> and <span class="weight-bold pink">Inventory</span> Management Anytime, Anywhere</h2>
-            <p class="dmsans size-18 weight-400 lightblue training__subtxt"><span class="d-block training__subtxt--span">Live training comes with technical issues, lack of engagement and distractions.</span><span class="d-block mtop-30 mrb-25 training__subtxt--span">Bring higher quality training and inventory management to your teams while removing the pressure of coordinating time zones, busy calendars , and last minute changes. </span></p><a class="customBtn pdr-67 pdl-67 " href="#">Get Started</a>
+            <p class="dmsans size-18 weight-400 lightblue training__subtxt"><span class="d-block training__subtxt--span">Live training comes with technical issues, lack of engagement and distractions.</span><span class="d-block mtop-30 mrb-25 training__subtxt--span">Bring higher quality training and inventory management to your teams while removing the pressure of coordinating time zones, busy calendars and last minute changes. </span></p><a class="customBtn pdr-67 pdl-67 " href="#">Get Started</a>
           </div>
         </div>
       </div>
@@ -90,38 +92,57 @@
               <form class="saveTime__estimate--form">
                 <p class="drkBlue weight-400 size-25 font-dmsans text-center mrb-10 ">Your Estimated Yearly Savings</p>
                 <div class="d-flex saveTime__estimate--inputgroup justify-content-center"><span class="drkBlue weight-400 size-55 font-outfit d-block saveTime__estimate--inputgroup--sign">$</span><span class=" d-block weight-200 size-55 saveTime__estimate--inputgroup--line"> </span>
-                  <input class="border-none saveTime__estimate--inputgroup--input" type="text" placeholder="00000">
+                  <input class="border-none saveTime__estimate--inputgroup--input savingResult" type="text" disabled placeholder="00000">
                   <button class="customBtn startSaving">Start Saving</button>
                 </div>
               </form>
               <div class="saveTime__estimate--bkgroundBlue"></div>
+              <p class="saveTime__estimate--form__error"> </p>
             </div>
             <form class="saveTime__estimate--formTwo mtop-50">
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Live Training</label><span class="icon-fluent_live-20-filled size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Live Training *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Enter the duration of your current training program by hours (e.g. A two hour training can be input as 2).</p>
+                </label><span class="icon-fluent_live-20-filled size-25"></span>
+                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="02" value="">
               </div>
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Dewdroppers Training </label><span class="icon-healthicons_i-training-class-outline size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Dewdroppers Training *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Current Dewdroppers users** reduce their training by an average of 30 minutes when using features to reduce training time  (e.g. A training program that is 2 hours long may be reduced to 1.5).**Current users as of June 1, 2024</p>
+                </label><span class="icon-healthicons_i-training-class-outline size-25"></span>
+                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="02" value="">
               </div>
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Staff Rate </label><span class="icon-solar_dollar-linear size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Staff Rate *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Enter the rate you pay your staff for training (e.g. Staff paid $40/hr can be entered as 40).</p>
+                </label><span class="icon-solar_dollar-linear size-25"></span>
+                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="02" value="">
               </div>
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Number of Staff *</label><span class="icon-threeDots size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Number of Staff *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Enter the number of staff you train throughout the year (e.g. A team of 250 staff can be entered as 250).</p>
+                </label><span class="icon-threeDots size-25"></span>
+                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="02" value="">
               </div>
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">No. of Campaigns</label><span class="icon-threeDots size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">No. of Campaigns *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Enter the number of campaigns or trainings offered throughout the year. Factor in any refresher training, courses, meetings, etc (e.g.  Staff are trained 2 times per year on each of our 2 campaigns can be entered as 4)</p>
+                </label><span class="icon-threeDots size-25"></span>
+                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="02" value="">
               </div>
               <div class="saveTime__estimate--formTwo--inputGroup">
-                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Dewdroppers Plan </label><span class="icon-fluent_live-20-filled size-25"></span>
-                <input class="saveTime__estimate--formTwo--inputGroup--input" type="text" placeholder="">
+                <label class="font-dmsans weight-400 size-18 grey-4 saveTime__estimate--formTwo--inputGroup--label">Plan *
+                  <p class="saveTime__estimate--formTwo--inputGroup--popup">Click on the "Pricing" page and review the plan that best suits your team.</p>
+                </label><span class="icon-fluent_live-20-filled size-25"></span>
+                <select class="saveTime__estimate--formTwo--inputGroup--input select">
+                  <option value="288">Startup</option>
+                  <option value="576">Local</option>
+                  <option value="1248">Regional</option>
+                  <option value="1920">National</option>
+                </select>
               </div>
-              <button class="customBtn w-100 mtop-20 hoverContact" type="submit">Contact For A Yearly Savings Estimate</button>
+              <!--{icon:"icon-fluent_live-20-filled",label:"Dewdroppers Plan ",placeholder:02}-->
+              <button class="customBtn w-100 mtop-20 hoverContact" type="button" disabled>Calculate Yearly Savings Estimate</button>
             </form>
           </div>
         </div>
@@ -151,14 +172,6 @@
                       <h2 class="font-outfit size-24 normalBlack text-center weight-bold">Michelle Fariabi</h2>
                       <h3 class="dmsans size-16 brown weight-400 text-center mrb-5 mtop-5">City Manager</h3>
                       <h4 class="dmsans size-16 brown weight-400 text-center">Top of the Line Event Marketing</h4>
-                    </div>
-              </div>
-              <div class="swiper-slide ">
-                    <div class="testmonialCard"> 
-                      <p class="dmsans size-16 brown weight-400 text-center testmonialCard__txt pdb-50">I've worked many years in sales &amp; for food brands but this was the first time I was introduced to taking courses before the event itself. This is a genius idea so that all new trainees are properly onboarded with in-depth knowledge about each brand prior to our events. The tests ensure we have the correct information to share about each product and its uniqueness!</p>
-                      <h2 class="font-outfit size-24 normalBlack text-center weight-bold">Nikki Loba</h2>
-                      <h3 class="dmsans size-16 brown weight-400 text-center mrb-5 mtop-5">Promotional Specialist</h3>
-                      <h4 class="dmsans size-16 brown weight-400 text-center">Self Employed</h4>
                     </div>
               </div>
               <div class="swiper-slide ">
@@ -200,16 +213,16 @@
             <li class="green-6 font-dmsans size-16 weight-500 mrb-10">Enhanced Event Execution</li>
             <li class="green-6 font-dmsans size-16 weight-500 mrb-10">Management Team Assurance</li>
           </ul>
-        </div><a class="customBtn getQoute" href="#">Get A Quote  !</a>
+        </div><a class="customBtn getQoute" href="#">Get A Quote</a>
       </div><img class="GetQoute__floatImg" src="images/iphone-footer.png">
     </div>
     <div class="bottomFooter">
       <div class="container-page">
         <div class="bottomFooter__container">
           <ul class="d-flex justify-content-between">
-            <li> <a class="white font-dmsans" href="#">Terms and Conditions  </a></li>
-            <li><a class="white font-dmsans" href="#">Privacy Policy  </a></li>
-            <li><a class="white font-dmsans" href="#">Cookie Policy</a></li>
+            <li> <a class="white font-dmsans" href="TermsCondition.html" target="_blank">Terms and Conditions  </a></li>
+            <li><a class="white font-dmsans" href="privacy.html" target="_blank">Privacy Policy  </a></li>
+            <li><a class="white font-dmsans" href="cookies.html" target="_blank">Cookie Policy</a></li>
             <li class="white font-dmsans">Copyright &copy; 2024 Dewdroppers. All rights reserved.</li>
           </ul>
         </div>
@@ -241,7 +254,9 @@
         </div>
         <div class="modalSignUp__closeBtn"><img src="images/closeIcon.png"></div>
       </div>
-    </div><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

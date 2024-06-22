@@ -14,6 +14,16 @@ body{
       animation-fill-mode: both;
     }
   }
+  &.pricing {
+  //  background-color: $grey;
+  .container__navbarDew{
+    background-color: $grey;
+    box-shadow: 14px 4px 13.1px 0px #ABABAB40;
+    padding: 20px 0;
+
+  }
+   
+  }
  
 
 }
@@ -23,6 +33,14 @@ max-width: 75%;
 margin: auto;
 */
 }
+.container-generic{
+  width: 75%;
+  margin: auto;
+  @include max(992px){
+    width: 90%;
+  }
+}
+
 .container-page{
   width: 1250px;
   margin: auto;
