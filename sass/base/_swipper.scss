@@ -15,7 +15,7 @@
     content: "";
 }
 
-.testmonial,.pricingPage__swiper{
+.testmonial,.pricingPage__swiper,.registerCompany__cards {
     position: relative;
     .swiper {
         padding-bottom: 50px;
@@ -92,9 +92,13 @@
 width: 100%;
 margin: 0;
 bottom: auto;
+display: none;
+@include max(1280px){
+    display: block;
+}
 
 .swiper-button-next{
-    right: -35px;
+    right: -20px;
     @include max(500px){
         right: -10px;
     
@@ -104,7 +108,7 @@ bottom: auto;
     }
 }
 .swiper-button-prev{
-  left: -35px;
+  left: -20px;
   @include max(500px){
     left: -10px;
 }
@@ -112,4 +116,68 @@ bottom: auto;
     @extend %common;
 }
 }
+}
+.registerCompany__cards{
+.pagination {
+    top: 50%;
+    height: 25px;
+    margin: 0;
+    z-index: 1;
+    bottom: auto;
+    .swiper-button-next{
+        right: -20px;
+        @include max(500px){
+            right: -10px;
+        
+        }
+        &::after{
+            @extend %common;
+        }
+    }
+    .swiper-button-prev{
+      left: -20px;
+      @include max(500px){
+        left: -10px;
+    }
+      &::after{
+        @extend %common;
+    }
+    }
+}
+}
+.pricingPage__swiper{
+    .cardpricing {
+        @include max(500px){
+            max-width: 90%;
+        }
+    }
+}
+.registerCompany__cards{
+    @include max(500px){
+        .cardpricing__title{
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+           .cardpricing__selectPlan{
+            margin: 5px 0;
+            &--label{
+                padding: 5px 0;
+            }
+           }
+           .swiper {
+            padding-bottom: 15px !important;
+           }
+    }
+   
+}
+//
+.testmonial .pagination{
+    display: none;
+    @include max(992px){
+        display: block;
+    }
+}
+.testmonial .swiper-button-prev::after,.testmonial .swiper-button-next::after{
+    width: 20px !important;
+    height: 20px !important;
 }

@@ -1,6 +1,24 @@
+%commonBody{
+  position: fixed;
+  width: 100%;
+}
+//modalnOpenPlan
+body.modalnOpenPlan{
+  @extend %commonBody;
+.modalRegister{
+  
+  opacity: 1;
+  z-index: 999999999999999;
+  &__content{
+      opacity: 1;
+  }
+      
+}
+
+}
 body.modalOpen {
  
-
+  @extend %commonBody;
   .modalSignUp {
     opacity: 1;
     z-index: 999999999999999;
@@ -10,7 +28,7 @@ body.modalOpen {
   }
 }
 
-.modalSignUp {
+.modalSignUp,.modalRegister {
   position: fixed;
   top: 0;
   left: 0;
@@ -160,5 +178,38 @@ body.modalOpen {
     @include max(1440px){
       top: 30px;
     }
+  }
+}
+.modalRegister{
+  .modalRegister__content__container{
+    width: 100%;
+  }
+  .modalRegister__closeBtn{
+    left: auto;
+    right: 20px;
+    top: 10px;
+  }
+  &__backBtn{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    
+    opacity: 0;
+    transition: .25s;
+    z-index: -1;
+    &.active{
+      opacity: 1;
+      z-index: 999;
+      cursor: pointer;
+    }
+    img{
+      width: 25px;
+    }
+  }
+}
+.modalRegister__content{
+  @include max(500px){
+    height: auto;
+    max-width: 96%;
   }
 }
