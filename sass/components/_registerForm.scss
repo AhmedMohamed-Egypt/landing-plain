@@ -252,6 +252,9 @@
                     &.hide{
                         display: none;
                     }
+                    input{
+                        color: $black !important;
+                    }
                 }
                 h2{
                     margin-bottom: 25px;

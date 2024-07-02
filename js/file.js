@@ -329,17 +329,20 @@ function toggleBtns(btns, pricesItems, txtdesc, switchBtns) {
           const applyDiscount = fixedPricePlans.map(
             (item) => item.price - item.price * 0.2
           );
-          
+          planYearlyMonth = item.querySelector('input').getAttribute('value')
+          updateFillInputRegister(applyDiscount);
           fillPrices(pricesItems, applyDiscount);
           if(item.classList.contains('registerCompany__cards--switchPalns--div') && errorSelect==false){
+          
             if(document.querySelector('.focused')){
             selectedPlanValue = document.querySelector('.focused').querySelector('input').getAttribute('value')
             selectedPlanName = document.querySelector('.focused').querySelector('input').getAttribute('id')
             }
             
+            
             planYearlyMonth = item.querySelector('input').getAttribute('value')
               fillDataPlan(selectedPlanValue,selectedPlanName,planYearlyMonth)
-            updateFillInputRegister(applyDiscount);
+            
          
           }
 
@@ -347,15 +350,18 @@ function toggleBtns(btns, pricesItems, txtdesc, switchBtns) {
         } else {
           fillPrices(pricesItems, fixedPricePlans);
           const fixedPrices = fixedPricePlans.map((item)=>item.price)
+          planYearlyMonth = item.querySelector('input').getAttribute('value')
+          updateFillInputRegister(fixedPrices);
            if(item.classList.contains('registerCompany__cards--switchPalns--div') && errorSelect==false){
+           
               if(document.querySelector('.focused')){
             selectedPlanValue = document.querySelector('.focused').querySelector('input').getAttribute('value')
             selectedPlanName = document.querySelector('.focused').querySelector('input').getAttribute('id')
             }
-       
+           
             planYearlyMonth = item.querySelector('input').getAttribute('value')
               fillDataPlan(selectedPlanValue,selectedPlanName,planYearlyMonth)
-             updateFillInputRegister(fixedPrices);
+            
            //  fillDataPlan(selectedPlanValue,selectedPlanName)
           }
         }
