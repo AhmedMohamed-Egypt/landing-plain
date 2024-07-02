@@ -329,7 +329,10 @@ function toggleBtns(btns, pricesItems, txtdesc, switchBtns) {
           const applyDiscount = fixedPricePlans.map(
             (item) => item.price - item.price * 0.2
           );
-          planYearlyMonth = item.querySelector('input').getAttribute('value')
+          if(item.classList.contains("registerCompany__cards--switchPalns--div")){
+            planYearlyMonth = item.querySelector('input').getAttribute('value')
+          }
+         
           updateFillInputRegister(applyDiscount);
           fillPrices(pricesItems, applyDiscount);
           if(item.classList.contains('registerCompany__cards--switchPalns--div') && errorSelect==false){
@@ -350,7 +353,9 @@ function toggleBtns(btns, pricesItems, txtdesc, switchBtns) {
         } else {
           fillPrices(pricesItems, fixedPricePlans);
           const fixedPrices = fixedPricePlans.map((item)=>item.price)
-          planYearlyMonth = item.querySelector('input').getAttribute('value')
+          if(item.classList.contains("registerCompany__cards--switchPalns--div")){
+            planYearlyMonth = item.querySelector('input').getAttribute('value')
+          }
           updateFillInputRegister(fixedPrices);
            if(item.classList.contains('registerCompany__cards--switchPalns--div') && errorSelect==false){
            
