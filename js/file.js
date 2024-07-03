@@ -1,3 +1,5 @@
+
+
 const fixedPricePlans = [
   { planName: "Start Up", price: 30 },
   { planName: "Local", price: 60 },
@@ -12,9 +14,11 @@ let selectedPlanValue;
 let fillDataPlan;
 let resetDefault;
 let planYearlyMonth;
+let showErrorSelect;
 if(document.querySelector(".registerCompany__cards--switchPalns--div.active")){
   planYearlyMonth = document.querySelector(".registerCompany__cards--switchPalns--div.active").querySelector('input').value
 }
+let resetCompany;
 
 const savingResulInput = document.querySelector(".savingResult");
 const errorForm = document.querySelector(".saveTime__estimate--form__error");
@@ -127,8 +131,10 @@ function fireModal(btn, closeBtn, classModal) {
     closeBtn.addEventListener("click", () => {
       document.body.classList.remove(classModal);
       if(closeBtn.classList.contains('modalRegister__closeBtn')){
+        
+
         resetDefault()
-        console.log(55)
+        resetCompany()
       }
     });
   }
@@ -604,7 +610,7 @@ distributePop();
 
 let activeCompany = false;
 let activePersonal = false;
-const allChoosePlan = document.querySelectorAll(".choosePlan");
+const allChoosePlan = document.querySelectorAll(".choosePlanBtn");
 const closeModalChoosePlanBtn = document.querySelector(
   ".modalRegister__closeBtn"
 );
@@ -659,37 +665,51 @@ function fireRegisterForm() {
    personalWidget.classList.remove("active");
    companyWidget.classList.remove("active");
  
-  //registerForm.classList.remove("active");
- // selectorsPersonalCompany.classList.remove("hide");
-  //backBtnRegister.classList.remove("active");
+ 
+}
+resetCompany = ()=>{
+  fillPrices(allPricesRegister, fixedPricePlans);
+  showErrorSelect()
+  step=0
+  fillInputRegister(fixedPricePlans);
+  //document.querySelector(".registerCompany__selectedItem--details--error").classList.remove('show')
+  document.querySelector(".registerCompany__selectedItem--details--inner").innerHTML = ""
+  document.querySelectorAll(".companysteps ").forEach((item,index)=>{
+
+    if(index>0){
+      item.classList.remove('active')
+
+    }else {
+      item.classList.add('active')
+
+    }
+  })
   
-  //companyWidget.classList.remove("active");
-  
-  /*
-  spanSteps.querySelectorAll('span').forEach((item)=>{
+  document.querySelectorAll(".registerForm__company__container--steps > span").forEach((item)=>{
     item.classList.remove('active')
   })
- // document.querySelector('.registerCompany__selectedItem--details--error').classList.remove('show')
-  nextButton.classList.remove('hide')
-  errorSelect = true
-  payButton.classList.remove('show')
-  for(let i = 0 ; i < selectPlanBtn.length;i++){
-    selectPlanBtn[i].classList.remove('focused')
-  }
+  document.querySelector(".registerForm__company").classList.remove('active')
+  document.querySelector(".registerForm").classList.remove('active')
+  document.querySelector(".modalRegister__backBtn").classList.remove('active')
+  document.querySelector(".registerForm__company__container--next").classList.remove('hide')
+  document.querySelector(".registerForm__company__container--pay").classList.remove("show")
+  document.querySelector(".registerCompany__selectedItem--details--inner").classList.remove('no-error')
   document.querySelectorAll(".cardpricing__selectPlan--input").forEach((item)=>{
-    item.checked=false
+    item.checked = false
   })
-  document.querySelector('.registerCompany__selectedItem--details').classList.remove('no-error')
-   
-  document.querySelector('.registerCompany__selectedItem--details').innerHTML = `<p class="registerCompany__selectedItem--details--error show">Please Select Plan</p>`
-  document.querySelector('.card-js').classList.add('hide')
-  document.querySelectorAll(".registerCompany__cards--switchPalns--div").forEach((item)=>{
-    item.classList.remove('active')
+  errorSelect=true
+  document.querySelector(".cardpricing__selectPlan").classList.remove('focused')
+  document.querySelectorAll(".registerCompany__cards--switchPalns--div").forEach((item,index)=>{
+    if(index===0) {
+      item.classList.add('active')
+    }else {
+      item.classList.remove('active')
+    }
+  
   })
-  document.querySelectorAll(".registerCompany__cards--switchPalns--div")[0].classList.add('active')
-  fillTitle(titleCardsRegister);
-  fillTitle(titlesLabels);
-  */
+  yearlyPricesRegister.forEach((item)=>{
+    item.textContent = "Monthly price based on 6 month subscription"
+  })
 }
 function backProcessRegister() {
   if (activePersonal) {
@@ -784,10 +804,10 @@ const errorWidget = document.querySelector(
   ".registerCompany__selectedItem--details--error"
 );
 const messageContainer = document.querySelector(
-  ".registerCompany__selectedItem--details"
+  ".registerCompany__selectedItem--details--inner"
 );
 const cardJs = document.querySelector(".card-js");
-function showErrorSelect() {
+ showErrorSelect=()=> {
   if(errorWidget){
     errorWidget.classList.add("show");
     cardJs.classList.add("hide");

@@ -178,6 +178,7 @@
                 }
             }
             .registerCompany__selectedItem{
+                
     
                 text-align: center;
                 padding: 20px 0;
@@ -188,25 +189,29 @@
                 flex-direction: column;
                 justify-content: center;
                 &--details{
-                   &.no-error{
-                    background-color: #000000;
-                    width: 90%;
-                    margin: auto;
-                    margin-bottom: 10px !important;
-                    border-radius: 10px;
-                    padding: 10px 0;
-                    font-style: italic;
-                   }
-                   
-                    >p{
-                        color: #fff;
-                        font-weight: 500;
-                        width: 90%;
-                        text-align: center;
-                        margin: auto;
-                        font-size: 17px;
-                        margin-bottom: 5px;
+                    &--inner{
+                        &.no-error{
+                            background-color: #000000;
+                            width: 90%;
+                            margin: auto;
+                            margin-bottom: 10px !important;
+                            border-radius: 10px;
+                            padding: 10px 0;
+                            font-style: italic;
+                           }
+                           >p{
+                            color: #fff;
+                            font-weight: 500;
+                            width: 90%;
+                            text-align: center;
+                            margin: auto;
+                            font-size: 17px;
+                            margin-bottom: 5px;
+                        }
                     }
+                 
+                   
+                
                     &--error{
                         display: none;
                         color: #fff !important;

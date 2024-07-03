@@ -52,7 +52,7 @@ body.home{
     }
    li{
  
-    >a{
+    >a:not(.choosePlanBtn){
         &.activelink {
             color: $green;
         }

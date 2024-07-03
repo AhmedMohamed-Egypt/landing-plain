@@ -28,6 +28,11 @@
   cursor: pointer;
   transition: 0.5s;
   border: 1px solid transparent;
+  &.hoverSignUp:hover{
+    border: 1px solid #a7c78f !important;
+    background-color: transparent !IMPORTANT;
+    color: #a7c78f !important;
+  }
   &.requestdemo {
     font-weight: 700;
     padding: 16px 50px;
@@ -97,6 +102,16 @@
     &.active {
       opacity: 1;
       cursor: pointer;
+    }
+  }
+  &.getAqoutepricing{
+    background-color: #2a3168 !important;
+    border: 1px solid transparent !IMPORTANT;
+    color: #fff !important;
+    &:hover{
+      border: 1px solid #2a3168;
+      background-color: $white !important;
+      color:#2a3168 !important ;
     }
   }
 }

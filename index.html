@@ -19,7 +19,7 @@
             <li class=" "><a class="     font-dmsans weight-500 size-16 drkBlue" href="#feature">Features</a></li>
             <li class=" margin-right-auto"><a class="     font-dmsans weight-500 size-16 drkBlue" href="Pricing.html">Pricing</a></li>
             <li class=" "><a class=" signBtn login green weight-bold size-16 mrt-20   font-dmsans weight-500 size-16 drkBlue" href="#">Sign in</a></li>
-            <li class=" "><a class=" signBtn  weight-bold size-16 radius-28  customBtn  font-dmsans weight-500 size-16 drkBlue" href="#">Sign Up</a></li>
+            <li class=" "><a class="choosePlanBtn hoverSignUp   weight-bold size-16 radius-28  customBtn  font-dmsans weight-500 size-16 drkBlue" href="#">Sign Up</a></li>
           </ul>
           <div class="habmurgMenu"> <span> </span><span> </span><span></span></div>
         </div>
@@ -28,7 +28,7 @@
         <div class="herocontent__leftside"> 
           <p class="label ">Training Elevated</p>
           <h1 class="font-outfit weight-300 drkBlue size-h1 herocontent__h1 mtop-20 mrb-40">Train Staff <span class="coloredword d-block">Smarter,</span> Not Harder</h1>
-          <p class="herocontent__leftside--text mrb-25 font-dmsans size-18 weight-400 lightblue">Dewdroppers allows managers to create brand and product training that their staff take on their own time, at their own pace. The result? Managers with more free time and staff that deliver a higher quality event.</p><a class="customBtn getstarted mrb-50">Get Started</a>
+          <p class="herocontent__leftside--text mrb-25 font-dmsans size-18 weight-400 lightblue">Dewdroppers allows managers to create brand and product training that their staff take on their own time, at their own pace. The result? Managers with more free time and staff that deliver a higher quality event.</p><a class="customBtn getstarted mrb-50 hoverSignUp   choosePlanBtn ">Get Started</a>
           <div class="herocontent__leftside--managers">
                   <div class="herocontent__leftside--managers--imgs mrb-25"><img class="radius-50" src="images/avatar-1.png"><img class="radius-50" src="images/avatar-2.png"><img class="radius-50" src="images/avatar-3.png">
                   </div>
@@ -78,7 +78,7 @@
           <div class="training__rightside"> 
             <p class="label mrb-25"> Inventory Optimization</p>
             <h2 class="h2Heading training__heading mrb-25"><span class="weight-bold pink">Training</span> and <span class="weight-bold pink">Inventory</span> Management Anytime, Anywhere</h2>
-            <p class="dmsans size-18 weight-400 lightblue training__subtxt"><span class="d-block training__subtxt--span">Live training comes with technical issues, lack of engagement and distractions.</span><span class="d-block mtop-30 mrb-25 training__subtxt--span">Bring higher quality training and inventory management to your teams while removing the pressure of coordinating time zones, busy calendars and last minute changes. </span></p><a class="customBtn pdr-67 pdl-67 " href="#">Get Started</a>
+            <p class="dmsans size-18 weight-400 lightblue training__subtxt"><span class="d-block training__subtxt--span">Live training comes with technical issues, lack of engagement and distractions.</span><span class="d-block mtop-30 mrb-25 training__subtxt--span">Bring higher quality training and inventory management to your teams while removing the pressure of coordinating time zones, busy calendars and last minute changes. </span></p><a class="customBtn pdr-67 pdl-67 choosePlanBtn hoverSignUp   " href="#">Get Started</a>
           </div>
         </div>
       </div>
@@ -214,7 +214,7 @@
             <li class="green-6 font-dmsans size-16 weight-500 mrb-10">Enhanced Event Execution</li>
             <li class="green-6 font-dmsans size-16 weight-500 mrb-10">Management Team Assurance</li>
           </ul>
-        </div><a class="customBtn getQoute" href="#">Get A Quote</a>
+        </div><a class="customBtn getQoute choosePlanBtn hoverSignUp   " href="#">Get A Quote</a>
       </div><img class="GetQoute__floatImg" src="images/iphone-footer.png">
     </div>
     <div class="bottomFooter">
@@ -256,9 +256,189 @@
         <div class="modalSignUp__closeBtn"><img src="images/closeIcon.png"></div>
       </div>
     </div>
+    <div class="modalRegister">
+      <div class="modalRegister__content">
+        <div class="modalRegister__content__container">
+          <div class="registerForm">
+            <div class="registerForm__selectors d-flex align-items-center justify-content-center">
+                        <div>
+                          <input type="radio" id="company" name="identitiy">
+                          <label for="company">company</label>
+                        </div>
+                        <div class="mrl-10">
+                          <input type="radio" id="personal" name="identitiy">
+                          <label for="personal">personal</label>
+                        </div>
+            </div>
+            <div class="registerForm__personal">
+                        <form>
+                          <div class="registerForm__personal__container pdt-30">
+                            <div> 
+                              <p class="font-popinos size-17 weight-500">Register User </p>
+                            </div>
+                            <div> 
+                              <input type="text" placeholder="First Name">
+                            </div>
+                            <div> 
+                              <input type="text" placeholder="Last Name">
+                            </div>
+                            <div> 
+                              <input type="text" placeholder="Email">
+                            </div>
+                            <div> 
+                              <input type="password" placeholder="Password">
+                            </div>
+                            <div> 
+                              <input type="password" placeholder="Confirm Password">
+                            </div>
+                            <div class="pointer">
+                              <input type="checkbox" id="terms">
+                              <label for="terms">Accept Terms</label>
+                            </div>
+                            <div> 
+                              <button class="btn customBtn w-100" type="submit">Sign Up</button>
+                            </div>
+                          </div>
+                        </form>
+            </div>
+            <div class="registerForm__company">
+              <div class="registerForm__company__container"> 
+                <div> 
+                  <p class="font-popinos size-17 weight-500 ">Register Copmany</p>
+                </div>
+                <div class="registerForm__company__container--steps "><span> </span><span> </span><span> </span></div>
+                <form>
+                  <div class="registerCompany__companyInfo companysteps active">
+                    <p class="font-popinos size-17 weight-500 mrb-15">Tell Us about your Company </p>
+                    <div> 
+                      <input type="text" placeholder="Company Name" name="companyname" value="">
+                    </div>
+                    <div> 
+                      <input type="text" placeholder="Address">
+                    </div>
+                    <div> 
+                      <input type="tel" placeholder="Phone Number" name="phonNumber" value="" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </div>
+                    <div> 
+                      <input type="text" placeholder="Total Number of Staff">
+                    </div>
+                  </div>
+                  <div class="registerCompany__companyUser companysteps">
+                    <div> 
+                      <input type="text" placeholder="First Name">
+                    </div>
+                    <div> 
+                      <input type="text" placeholder="Last Name">
+                    </div>
+                    <div> 
+                      <input type="text" placeholder="Email">
+                    </div>
+                    <div> 
+                      <input type="password" placeholder="Password">
+                    </div>
+                    <div> 
+                      <input type="password" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                  <div class="registerCompany__cards companysteps">
+                    <div class="registerCompany__cards--switchPalns d-flex align-items-center">
+                      <div class="registerCompany__cards--switchPalns--div active">
+                        <input class="registerCompany__cards--switchPalns--input" type="radio" name="registerPlan" value="6 month" id="monthlyRegister">
+                        <label class="registerCompany__cards--switchPalns--label" for="monthlyRegister">Month</label>
+                      </div>
+                      <div class="registerCompany__cards--switchPalns--div">
+                        <input class="registerCompany__cards--switchPalns--input" type="radio" name="registerPlan" value="year" id="yearRegister">
+                        <label class="registerCompany__cards--switchPalns--label" for="yearRegister">Year</label>
+                      </div>
+                    </div>
+                    <div class="swiper pdb-50">
+                      <div class="swiper-wrapper"> 
+                        <div class="swiper-slide">
+                                              <div class="cardpricing d-flex align-items-center flex-column radius-12 "> 
+                                                <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__title">startup</h2>
+                                                <h3 class="font-outfit deepdrkblue size-46 weight-400 cardpricing__price"><span class="weight-700 size-20 d-inline-block  cardpricing__price--sign">$</span><span class="cardpricing__price--value">36</span><span class="deepgreen size-18 font-outfit weight-700">/Mon</span></h3>
+                                                <p class="deepgreen font-outfit weight-600 size-12 mtop-10 mrb-10 cardpricing__desc">Monthly price based on 6 month subscription</p>
+                                                <div class="cardpricing__selectPlan">
+                                                  <input class="cardpricing__selectPlan--input" type="radio" id="startup" value="36" name="plan">
+                                                  <label class="cardpricing__selectPlan--label customBtn" for="startup">startup</label>
+                                                </div>
+                                              </div>
+                        </div>
+                        <div class="swiper-slide">
+                                              <div class="cardpricing d-flex align-items-center flex-column radius-12 "> 
+                                                <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__title">local</h2>
+                                                <h3 class="font-outfit deepdrkblue size-46 weight-400 cardpricing__price"><span class="weight-700 size-20 d-inline-block  cardpricing__price--sign">$</span><span class="cardpricing__price--value">72</span><span class="deepgreen size-18 font-outfit weight-700">/Mon</span></h3>
+                                                <p class="deepgreen font-outfit weight-600 size-12 mtop-10 mrb-10 cardpricing__desc">Monthly price based on 6 month subscription</p>
+                                                <div class="cardpricing__selectPlan">
+                                                  <input class="cardpricing__selectPlan--input" type="radio" id="local" value="72" name="plan">
+                                                  <label class="cardpricing__selectPlan--label customBtn" for="local">local</label>
+                                                </div>
+                                              </div>
+                        </div>
+                        <div class="swiper-slide">
+                                              <div class="cardpricing d-flex align-items-center flex-column radius-12 "> 
+                                                <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__title">regional</h2>
+                                                <h3 class="font-outfit deepdrkblue size-46 weight-400 cardpricing__price"><span class="weight-700 size-20 d-inline-block  cardpricing__price--sign">$</span><span class="cardpricing__price--value">156</span><span class="deepgreen size-18 font-outfit weight-700">/Mon</span></h3>
+                                                <p class="deepgreen font-outfit weight-600 size-12 mtop-10 mrb-10 cardpricing__desc">Monthly price based on 6 month subscription</p>
+                                                <div class="cardpricing__selectPlan">
+                                                  <input class="cardpricing__selectPlan--input" type="radio" id="regional" value="156" name="plan">
+                                                  <label class="cardpricing__selectPlan--label customBtn" for="regional">regional</label>
+                                                </div>
+                                              </div>
+                        </div>
+                        <div class="swiper-slide">
+                                              <div class="cardpricing d-flex align-items-center flex-column radius-12 promote"> 
+                                                <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__title">National</h2>
+                                                <h3 class="font-outfit deepdrkblue size-46 weight-400 cardpricing__price"><span class="weight-700 size-20 d-inline-block  cardpricing__price--sign">$</span><span class="cardpricing__price--value">240</span><span class="deepgreen size-18 font-outfit weight-700">/Mon</span></h3>
+                                                <p class="deepgreen font-outfit weight-600 size-12 mtop-10 mrb-10 cardpricing__desc">Monthly price based on 6 month subscription</p>
+                                                <div class="cardpricing__selectPlan">
+                                                  <input class="cardpricing__selectPlan--input" type="radio" id="National" value="240" name="plan">
+                                                  <label class="cardpricing__selectPlan--label customBtn" for="National">National</label>
+                                                </div>
+                                              </div>
+                        </div>
+                        <div class="swiper-slide">
+                                              <div class="cardpricing d-flex align-items-center flex-column radius-12 cardpricing__Enterprise">
+                                                <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__title exclude">Enterprise</h2>
+                                                <div class="w-100 d-flex flex-column align-items-center cardpricing__Enterprise--getAqoute">
+                                                  <h2 class="font-outfit weight-500 size-30 capiliatize cardpricing__price">Custom Price</h2><a class="btn customBtn cardpricing__getAqoute " href="#">Contact Sales</a><a class="customBtn  getAqoutepricing" href="mailto:customersupport@dewdroppers.com">Get A Quote </a>
+                                                </div>
+                                              </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pagination position-relative">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                  <div class="registerCompany__selectedItem companysteps ">
+                    <div class="registerCompany__selectedItem--details">
+                      <div class="registerCompany__selectedItem--details--inner"></div>
+                      <p class="registerCompany__selectedItem--details--error">Please Select Plan</p>
+                    </div><div>
+<div class="card-js" data-capture-name="true"></div>
+</div>
+                  </div>
+                  <div>
+                    <button class="btn customBtn registerForm__company__container--next">Next</button>
+                  </div>
+                  <div>
+                    <button class="btn customBtn registerForm__company__container--pay">Pay</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalRegister__closeBtn"><img class="position-relative z-index-1" src="images/closeIcon.png"></div>
+        <div class="modalRegister__backBtn"><img src="images/icons8-arrow-64.png"></div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/card-js.min.js"></script>
     <script src="js/file.js"></script>
   </body>
 </html>
