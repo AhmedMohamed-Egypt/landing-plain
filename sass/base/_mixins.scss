@@ -41,7 +41,7 @@
 }
 @for $i from 1 through 50 {
   .radius-#{$i} {
-    border-radius: $i + px;
+    border-radius: $i + px !important;
   }
 }
 /*center elem*/
