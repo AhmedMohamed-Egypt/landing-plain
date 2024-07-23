@@ -123,11 +123,7 @@ function fireModal(btn, closeBtn, classModal) {
         } else {
           activeRegister = false;
         }
-        if(item.getAttribute("id")=="forgetPassBtn"){
-          document.body.classList.remove('modalnOpenPlan')
-          document.body.classList.remove('modalOpen')
-
-        }
+       
       });
     }
   });
@@ -641,10 +637,7 @@ let formSteps = 3;
 
 //firingChoosePlan
 fireModal(allChoosePlan, closeModalChoosePlanBtn, "modalnOpenPlan");
-//fire modal forget password
-const forgetPassword = document.querySelectorAll("#forgetPassBtn")
-const closeModalPassword= document.querySelector(".modalForgetPassword__closeBtn")
-fireModal(forgetPassword,closeModalPassword,"modalOpenPass")
+
 //firing regsiterForm
 function fireRegisterForm() {
   registerForm.classList.add("active");
